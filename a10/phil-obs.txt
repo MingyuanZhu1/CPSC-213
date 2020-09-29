@@ -1,0 +1,18 @@
+In phil-rightfork: 
+I tried more than 10 times with input 2 2. Majority of the times
+it does not work. It generate a dead lock as soon as two philiphors picks up right forks.
+However, sometimes, the program will come to an end. And I suspect that it could be another program 
+initiate an interupt to block the current thread and it will essentially make the program come to an end.
+The reason that rightfork will come to an deadlock is that if everyone picks the right fork, they will 
+all wait for the left fork and that is impossible to run.
+
+
+In phil-ordered:
+I tried more than 10 times with input 10,10, 11,11, 10,11, etc. 
+Essentially, the program will come to an end with even number of philiphors but will not come to and
+an end with odd number of philiphors.
+
+In phil-random:
+I tried more than 10 time with input like 100,100 10,10 20,20 and so on, found out that for even numbers
+of philiphors, the program runs without a problem. But when given an odd number of philiphors, the last 
+philiphor keeps giving up.

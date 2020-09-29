@@ -1,0 +1,30 @@
+time ./tRead 10  
+163
+
+real	0m0.035s
+user	0m0.016s
+sys	    0m0.019s
+
+time ./tRead 100
+1468
+
+real	0m0.125s
+user	0m0.020s
+sys	    0m0.104s
+
+time ./tRead 1000
+14518
+
+real	0m0.950s
+user	0m0.036s
+sys	    0m0.914s
+
+The real running time follows:
+sRead > tRead > aRead
+tRead is slower than sRead because it handles reads and writes sequentially.
+tRead is faster than aRead because it has multiple threads to handle the data.
+
+The system running time follows:
+tRead > sRead = aRead
+tRead is slower than both sRead and aRead because it needs to create multiple threads.
+Thus, more time is needed.

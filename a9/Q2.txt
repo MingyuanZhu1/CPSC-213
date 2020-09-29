@@ -1,0 +1,24 @@
+time ./aRead 10
+163
+
+real    0m0.026s
+user    0m0.018s
+sys     0m0.007s
+
+time ./aRead 100
+1468
+
+real    0m0.026s
+user    0m0.024s
+sys     0m0.001s
+
+./aRead 1000
+14518
+
+real    0m0.029s
+user    0m0.024s
+sys     0m0.005s
+
+aRead performs better compare to sRead. This is because in aRead, it sets off multiple disk reads at once.
+Thus, CPU does not have to wait before each read is done to continue. Consequently, even though it looks like
+the performance is similiar in aRead 10 and aRead 100, it does inprove significantly in aRead 1000.

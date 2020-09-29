@@ -1,0 +1,2 @@
+Writes: v0,v1,v2,v3,a->b.a
+Read: i, a, a->x, a->x[i], a->b.y[i], a->b.a, a->b.a->x, a->b.a->x[i]

@@ -1,0 +1,5 @@
+After comment out free(e->value); and free(e); inside element.c, we do not have a dangling pointer anymore.
+Therefore, the problem is both list and tree point to an element. And after freed an element from list,
+the pointer in tree will become a dangling pointer because tree is still pointing to it. Samething will happen
+if you call element_delete in tree class. That's the reason why the both work seperatly yet, if you let them work
+together, you will have a dangling pointer.

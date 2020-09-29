@@ -1,0 +1,24 @@
+time ./sRead 10
+163
+
+real    0m0.222s
+user    0m0.217s
+sys     0m0.004s
+
+time ./sRead 100
+1468
+
+real    0m2.202s
+user    0m2.197s
+sys     0m0.004s
+
+time ./sRead 1000
+14518
+
+real    0m21.984s
+user    0m21.980s
+sys     0m0.000s
+
+What I am observing is that as the read frequency increase, the time required for the program to finish also increases.
+This is because in synchronize read, only one thing can be read at a time and it needs a very long time to finish reading 
+the current block of code and move on to the next block.
