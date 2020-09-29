@@ -1,0 +1,1 @@
+4. Since the 1980's chips are using big-endian and our Core i7 uses little endian, we need to actually adjust the way we read our position to get the correct result. RA should be 0x65F60700. D should be 0x8151DEFF.

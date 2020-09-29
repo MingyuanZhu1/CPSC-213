@@ -1,0 +1,1 @@
+3. If we have a 4-byte integer 0x10010110, it doesn't matter if we choose big-endian or small-endian, they will still read the same. As long as you have the same number for the first and last digit and the second and third, it will all read the same.

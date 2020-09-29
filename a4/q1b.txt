@@ -1,0 +1,3 @@
+2. It actually prints :
+Hello Kelly!
+Segmentation fault (core dumped)

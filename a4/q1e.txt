@@ -1,0 +1,4 @@
+what I have realized that there is a segmentation fault(core dumped), I start my looking at
+which line was the last line that actually excuted. Then I reaslied we intent to print decimal
+integer. Yet, we used %s, which is character and that's why there is a seg fault. Therefore, I 
+changed it to %d, which is used for decimal.

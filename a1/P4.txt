@@ -1,0 +1,53 @@
+Base cases 1: 
+java Endianness 0 0 0 0
+The big    endian integer value at address 0 is 0
+The little endian integer value at address 0 is 0
+As expected!
+
+Base cases 2: 
+java Endianness 1 2 3 4
+The big    endian integer value at address 0 is 16909060
+The little endian integer value at address 0 is 67305985
+As expected!
+
+Test1: testing for positive integer 
+java Endianness 0 0 0 1
+The big    endian integer value at address 0 is 1
+The little endian integer value at address 0 is 16777216
+As expected!
+
+Test2: testing for positive integer
+java Endianness 1 0 0 0
+The big    endian integer value at address 0 is 16777216
+The little endian integer value at address 0 is 1
+As expected!
+
+Test3: testing for negative integer 
+java Endianness ff ff ff 00
+The big    endian integer value at address 0 is -256
+The little endian integer value at address 0 is 16777215
+As expected!
+
+Test4: testing for negative integer 
+java Endianness 00 ff ff ff 
+The big    endian integer value at address 0 is 16777215
+The little endian integer value at address 0 is -256
+As expected!
+
+Test5: testing for negative integer
+java Endianness 80 00 00 00
+The big    endian integer value at address 0 is -2147483648
+The little endian integer value at address 0 is 128
+As expected!
+
+Test6: testing for negative integer
+java Endianness 00 00 00 80
+The big    endian integer value at address 0 is 128
+The little endian integer value at address 0 is -2147483648
+As expected!
+
+Test7: testing for largest hex number
+java Endianness ff ff ff ff
+The big    endian integer value at address 0 is -1
+The little endian integer value at address 0 is -1
+As expected!
